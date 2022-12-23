@@ -1,0 +1,119 @@
+#include <iostream>
+#include <time.h>
+#include <stdlib.h>
+
+using namespace std;
+
+void Yaz();
+int Denklem1(int a,int b);
+long Nufus(long simdiki,float oran,int yil);
+int Sayiuret(int buyuk,int kucuk);
+void Sayiuret1(int& buyuk1,int kucuk1);
+void Esdeger(int& seri, float& paralel,float d1,int d2,int d3);
+int Esdeger(float& paralel,int a1,int a2, int a3);
+
+int main(){
+	int islem,yil,buyuk,kucuk,buyuk1,kucuk1,a,b,toplam,d2,d3,seri,a1,a2,a3;
+	long simdiki;
+	float oran,paralel,d1;
+	cout<<"Verilen odeve bakarak calistirmak istediginiz fonksiyon sorusunu giriniz:";
+	cin>>islem;
+	
+	switch(islem){
+		case 1:
+			Yaz();
+			break;
+		case 2:
+			cout<<Denklem1(a,b)<<endl;
+			break;
+		case 3:
+			cout<<"Simdiki nufusu giriniz:";
+			cin>>simdiki;
+			cout<<"Nufus artıs oranını giriniz:";
+			cin>>oran;
+			cout<<"Nufusu hesaplanmak istenen yil:";
+			cin>>yil;
+			cout<<yil<<" Sonra Hesaplanan nufus:"<<Nufus(simdiki,oran,yil)<<endl;
+			break;
+		case 4:
+			cout<<"Buyuk sayiyi giriniz:";
+			cin>>buyuk;
+			cout<<"Kucuk sayiyi giriniz:";
+			cin>>kucuk;
+			cout<<Sayiuret(buyuk,kucuk)<<endl;
+			cout<<"Buyuk sayiyi giriniz:";
+			cin>>buyuk1;
+			cout<<"Kucuk sayiyi giriniz:";
+			cin>>kucuk1;
+			Sayiuret1(buyuk1,kucuk1);
+			break;
+		case 5:
+			cout<<"Birinci direnci giriniz:";
+			cin>>d1;
+			cout<<"Ikinci direnci giriniz:";
+			cin>>d2;
+			cout<<"Ucuncu direnci giriniz:";
+			cin>>d3;
+			Esdeger(seri,paralel,d1,d2,d3);
+			
+			cout<<"Birinci direnci giriniz:";
+			cin>>a1;
+			cout<<"Ikinci direnci giriniz:";
+			cin>>a2;
+			cout<<"Ucuncu direnci giriniz:";
+			cin>>a3;
+			
+			cout<<"paralel:"<<Esdeger( paralel,a1,a2, a3)<<endl;
+			
+			
+			break;
+		default:
+			cout<<"Girdinizi sayi tanimli degil!"<<endl;
+			
+	}
+	
+	system("pause");
+	return 0;
+}
+void Yaz(){
+	srand(time(0));
+	for(int i=0;i<rand()%(100-1+1)+1;i++){
+		cout<<i<<":"<<"Muhammed Mert Sayan"<<endl;
+	}
+}
+int Denklem1(int a,int b){
+	int toplam;
+	cout<<"alt sinir sayisini belirleyiniz:";
+	cin>>a;
+	cout<<"ust sinir sayisini belirleyiniz:";
+	cin>>b;
+	for(int i=a;i<=b;i++){
+		 toplam+=(3*i*i)+(5*i)-1;
+	}
+	return toplam;
+}
+long Nufus(long simdiki,float oran,int yil){
+	for(int i=0;i<yil;i++){
+		simdiki+=simdiki+simdiki*(oran/100);
+	}
+		return simdiki;
+}
+int Sayiuret(int buyuk,int kucuk){
+	srand(time(0));
+	return rand()%(buyuk-kucuk+1)+kucuk;
+}
+void Sayiuret1(int& buyuk1,int kucuk1){
+	
+	srand(time(0));
+	cout<<rand()%(buyuk1-kucuk1+1)+kucuk1<<endl;
+}
+void Esdeger(int& seri, float& paralel,float d1,int d2,int d3){
+	seri=d1+d2+d3;
+	paralel=(1/d1)+(1/d2)+(1/d3);
+	cout<<"seri:"<<seri<<endl;
+	cout<<"Paralel:"<<1/paralel<<endl;
+}
+int Esdeger(float& paralel,int a1,int a2, int a3){
+	return 	paralel=(1/a1)+(1/a2)+(1/a3);
+}
+	
