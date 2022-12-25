@@ -1,0 +1,33 @@
+#include <iostream>
+#include <locale.h>
+#include <time.h>
+#include <stdlib.h>
+#include <string.h>
+using namespace std;
+int main(){
+	srand(time(0));
+	int bilgisayar;
+	string tekrarla;
+	int oyuncu;
+	int adet=0;
+	bilgisayar=rand()%(6-1+1)+1;
+	cout<<"Bilgisayar zar atti ve degeri:"<<bilgisayar<<endl;
+	cout<<"Zar atmak icin z tusuna basiniz!"<<endl;
+	cin>>tekrarla;
+	adet++;
+	while(tekrarla=="z"){
+		oyuncu=rand()&(6-1+1)+1;
+		if(oyuncu==bilgisayar){
+			cout<<"Oyuncu z ye basti ve "<<oyuncu<<" atti."<<"Oyuncu "<<adet<<". atisinda tutturdu!"<<endl;
+			break;
+		}
+		else{
+			adet++;
+			cout<<"oyuncu z ye basti ve "<<oyuncu<<" atti."<<endl;
+			cout<<"Tekrar zar atamak icin z tusuna basiniz:";
+			cin>>tekrarla;
+		}
+	}
+	system("pause");
+	return 0;
+}
