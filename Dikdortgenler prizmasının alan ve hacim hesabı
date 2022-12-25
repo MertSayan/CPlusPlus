@@ -1,0 +1,26 @@
+#include <iostream>
+#include <locale.h>
+#include <time.h>
+#include <stdlib.h>
+#include <string.h>
+using namespace std;
+void Prizma(int a,int b,int c,int& alan,int& hacim);
+int main(){
+	int a,b,c,hacim,alan;
+	cout<<"Prizmanin alanini hesaplama sihirbazina hosgeldiniz!"<<endl;
+	cout<<"1.kenar uzunlugunu giriniz:";
+	cin>>a;
+	cout<<"2.kenar uzunlugunu giriniz:";
+	cin>>b;
+	cout<<"3.kenar uzunlugunu giriniz:";
+	cin>>c;
+	Prizma(a,b,c,alan,hacim);
+	cout<<"Hacim:"<<hacim<<endl;
+	cout<<"Alan:"<<alan<<endl;
+	system("pause");
+	return 0;
+}
+void Prizma(int a,int b,int c,int& alan,int& hacim){
+	hacim=a*b*c;
+	alan=2*((a*b)+(b*c)+(a*c))*((a*b)+(b*c)+(a*c));	
+}
