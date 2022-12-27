@@ -1,0 +1,95 @@
+#include <iostream>
+#include <locale.h>
+#include <time.h>
+#include <stdlib.h>
+#define kapasite 15
+using namespace std;
+
+int main(){
+	
+	
+	//rastgele ondalıklı ve tam sayı atama
+//	srand(time(0));
+//	
+//	int sayi=rand()%(100-0+1)+0;
+//	float kesir=(float)rand()/(float)RAND_MAX;
+//	cout<<sayi+kesir<<endl;
+	
+	
+	
+	
+	//Bubble Sort algoritması
+//	int sayilar[kapasite];
+//	int depo;
+//	srand(time(0));
+//	
+//	for(int i=0;i<kapasite;i++){
+//		sayilar[i]=rand()%(100-1+1)+1;
+//	}
+//	cout<<"Dizideki Sayilar:"<<endl;
+//	for(int i=0;i<kapasite;i++){
+//		cout<<sayilar[i]<<endl;
+//	}
+//	for(int i=0;i<kapasite;i++){
+//		for(int i=0;i<kapasite-1;i++){
+//			if(sayilar[i]>sayilar[i+1]){
+//				depo=sayilar[i];
+//				sayilar[i]=sayilar[i+1];
+//				sayilar[i+1]=depo;
+//			}
+//		}
+//	}
+//	cout<<"---------------------------------------"<<endl;
+//	for(int i=0;i<kapasite;i++){
+//		cout<<sayilar[i]<<endl;
+//	}
+
+
+
+	
+	
+	//Cümledeki kelimeleri değiştirme ( silip değiştiriyor )
+//	string cumle="Bugun hava soguk ve ruzgarli idi.";
+//	cumle.replace(0,5,"Dun");
+//	cout<<cumle<<endl;
+	
+	
+	
+	//Cumleye kelime ekleme
+//	string cumle="Bugun hava soguk ve ruzgarli idi.";
+//	cumle.insert(6,"deniz,");
+//	cout<<cumle<<endl;
+
+
+
+
+	//cumlenin sonundan karakter silme
+//	string cumle="Bugun hava soguk ve ruzgarli idi.";
+//	cumle.erase(cumle.size()-1,1);
+//	cout<<cumle<<endl;
+
+
+
+
+	//Cumlenin sonuna KARAKTER(char) ekleme
+//	string cumle="Bugun hava soguk ve ruzgarli idi.";
+//	cumle.append(4,'!');
+//	cout<<cumle<<endl;
+
+
+	//Karşılaştırma fonksiyonu ( compare) 
+//	string parola="Mert naber";
+//	string girilen;
+//	cout<<"Sifrenizi giriniz:";
+//	getline (cin,girilen);
+//	if(parola.compare(girilen)==0){
+//		cout<<"dogru"<<endl;
+//	}
+//	else{
+//		cout<<"Yanlis"<<endl;
+//	}
+
+
+	system("pause");
+	return 0;
+}
