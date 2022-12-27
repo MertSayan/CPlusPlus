@@ -1,0 +1,39 @@
+#include <iostream>
+#include <locale.h>
+#include <time.h>
+#include <stdlib.h>
+#include <string.h>
+using namespace std;
+
+void Ortalama(int final=-2,int vize=-2);
+
+int main(){
+
+	//kendisine parametre olarak gönderilen vize ve final notuna göre ortalama hesap edip
+ 	//ekrana yazdıran fonksiyonu tanımlayınız.Vize ve final notu girilmedi ise -2 alınacak.
+ 	
+ 
+// 	int final,vize;
+// 	cout<<"vize notunu giriniz:";
+// 	cin>>vize;
+// 	cout<<"Final notunuzu giriniz:";
+// 	cin>>final;
+// 	Ortalama(final,vize);
+	//kullanıcıdan alınıyor demediği için aşağıdaki gibi ysapılacak:
+	
+	Ortalama(80,40);
+//	
+//	Ortalama(40);
+		
+	system("pause");
+	return 0;
+}
+void Ortalama(int final,int vize){
+	if(vize==-2){
+		vize=0;
+	}
+	if(final==-2){
+		final=0;
+	}
+	cout<<"Ortalama:"<<(vize+final)/2<<endl;
+}
