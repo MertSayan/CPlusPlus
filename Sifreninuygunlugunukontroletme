@@ -1,0 +1,48 @@
+// klavyeden girilen string biçimindeki bir şifrenin en az 8 karakter uzunluğunda ve
+// en az 2 küçük 2 büyük karakterden oluşup oluşmadığını kontrol eden ekrana
+// "girdiginiz sifre kurallara uygun" veya "girdiginiz sifre kurallara uygun değil"yazan
+// sifrekontrol() adında bir fonksiyon yazınız ve deneyiniz.
+
+#include <iostream>
+#include <locale.h>
+#include <time.h>
+#include <stdlib.h>
+#include <string.h>
+
+using namespace std;
+void Sifrekontrol();
+
+int main(){
+	
+	 Sifrekontrol();
+
+
+	system("pause");
+	return 0;
+}
+void Sifrekontrol(){
+	string sifre;
+	int adetbuyuk=0;
+	int adetkucuk=0;
+	cout<<"sifrenizi giriniz:";
+	getline(cin,sifre);
+	if(sifre.size()>=8){
+		for(int i=0;i<sifre.size();i++){
+			if(sifre[i]>=65&&sifre[i]<=90){
+				adetbuyuk++;
+			}
+			if(sifre[i]>=97&&sifre[i]<=122){
+				adetkucuk++;
+			}
+		}
+		if(adetbuyuk>=2&&adetkucuk>=2){
+			cout<<"Girdiginiz sifre kurallara uygundur"<<endl;
+		}
+		else{
+		cout<<"Girdiginiz sifre kurallara uygun degildir! Sifreniz en az 2 buyuk ve kucuk harf barindirmalidir"<<endl;
+		}
+	}
+	else{
+		cout<<"Girdiginiz sifre kurallara uygun degildir! Sifreniz 8 karakterden daha kucuk olamaz!"<<endl;
+	}
+}
