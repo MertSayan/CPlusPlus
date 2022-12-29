@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+	
+	int boy;
+	int en;
+	int uc;
+	
+	cout<<"Boy uzunlugunu giriniz: ";
+	cin>>boy;
+	cout<<"En uzunlugunu giriniz: ";
+	cin>>en;
+	
+
+	for(int i=0;i<boy;i++){
+		for(int j=0;j<en;j++){
+			cout<<"*";
+		}
+		cout<<endl;
+	}
+	
+
+	cout<<"ucgen uzunlugunu girin:";
+	cin>>uc;
+	
+	for(int i=0;i<=uc;i++){
+		for(int j=0;j<i;j++){
+			cout<<"*";
+		}
+		cout<<endl;
+	}
+	system("pause");
+	return 0;
+}
