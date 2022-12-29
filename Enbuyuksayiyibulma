@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+	int a,sayi;
+	int enb=0;
+		
+	cout<<"kaç sayi girilecek"<<endl;
+	cin>>a;
+	
+	for(int i=0;i<a;i++){
+		cout<<"sayi giriniz:";
+		cin>>sayi;
+		
+		if(sayi>enb){
+			enb=sayi;
+		}
+	}
+	cout<<"En buyuk sayi:"<<enb<<endl;
+
+	system("pause");
+	return 0;
+}
