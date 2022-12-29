@@ -1,0 +1,32 @@
+#include <iostream>
+#include <stdlib.h>
+#include <time.h>
+
+using namespace std;
+
+int main(){
+	
+	int sayi1;
+	int sayi2;
+	
+	srand(time(0));
+		sayi2=rand()%(100-0+1)+0;
+		cout<<"Aklimdan bir sayi tuttum hadi tahmin et :) : ";
+		cin>>sayi1;
+	
+	while(sayi1!=sayi2){ //sonsuz döngü açtım. 
+		if(sayi1>sayi2){
+			cout<<"daha kucuk bir sayi giriniz:";
+			cin>>sayi1;
+		}
+		else{
+			cout<<"daha buyuk bir sayi giriniz:";
+			cin>>sayi1;
+		}
+		
+	}
+	cout<<"Tebrikler dogru bildiniz!"<<endl;
+	
+	system("pause");
+	return 0;
+}
