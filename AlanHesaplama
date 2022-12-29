@@ -1,0 +1,54 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+	
+	int islem,yaricap,karekenar,h,taban,kenaru,kenark;
+	int pi=3;
+	
+	cout<<"Yapmak istediginiz islemin numarasini girin:";
+	cout<<"1- Dairenin alanini hesapla"<<endl;
+	cout<<"2- Karenin alanini hesapla"<<endl;
+	cout<<"3- Ucgenin alanini hesapla"<<endl;
+	cout<<"4- Silindirin alanini hesapla"<<endl;
+	cout<<"5- Dikdortgenin alanini hesapla"<<endl;
+	cin>>islem;
+	
+	switch(islem){
+		case 1:
+			cout<<"yaricap uzunlugunu girin:";
+			cin>>yaricap;
+			cout<<"Alan:"<<2*pi*yaricap<<endl;
+			break;
+		case 2:
+			cout<<"bir kenar uzunlugunu girin:";
+			cin>>karekenar;
+			cout<<"Alan:"<<karekenar*karekenar<<endl;
+			break;
+		case 3:
+			cout<<"ucgenin yuksekligini giriniz:";
+			cin>>h;
+			cout<<"ucgenin taban alanini giriniz:";
+			cin>>taban;
+			cout<<"Alan:"<<(h*taban)/2<<endl;
+			break;
+		case 4:
+			cout<<"silindirin yaricap uzunlugunu giriniz:";
+			cin>>yaricap;
+			cout<<"silindirin yuksekligini giriniz:";
+			cin>>h;
+			cout<<"Alan:"<< (2*pi*yaricap*yaricap)+2*pi*yaricap*h;
+			break;
+		case 5:
+			cout<<"Dikdortgenin uzun kenarini giriniz:";
+			cin>>kenaru;
+			cout<<"Dikdortgenin kisa kenarini giriniz:";
+			cin>>kenark;
+			cout<<"Alan:"<<kenark*kenaru;
+			break;
+			
+	}
+	system("pause");
+	return 0;
+}
