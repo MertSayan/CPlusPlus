@@ -1,0 +1,84 @@
+#include <iostream>
+#define makss 100
+using namespace std;
+
+int main(){
+	char karakter;
+	int secim,adet=1,adet1;
+	string cumle,kelimesil,kelimedegistir,yenikelime,kelimedensonra,eklenecekkelime;
+	cout<<"Bir cumle girini:";
+	getline(cin,cumle);
+	cout<<"girdiginiz cumle:"<<cumle;
+	
+	cout<<"Secmek istediginiz islemi giriniz:"<<endl;
+	cout<<"1-Cumlenin tum harflerini buyuk harfli yazdirma"<<endl;
+	cout<<"2-Cumlenin tum harflerini kucuk harfli yazdirma"<<endl;
+	cout<<"3-Cumlenin kelime sayisini hesaplama"<<endl;
+	cout<<"4-Cumleden kelime silme"<<endl;
+	cout<<"5-Cumlenin sonuna karakter ekleme"<<endl;
+	cout<<"6-Cumleden bir kelimeyi degistirmek"<<endl;
+	cout<<"7-Cumlede araya ekleme yapma"<<endl;
+	cin>>secim;
+	
+	switch(secim){
+		case 1:
+		for(int i=0;i<cumle.size();i++){
+			if((int)cumle[i]>=97&&(int)cumle[i]<=122){
+				cumle[i]=cumle[i]-32;
+			}
+		}
+		cout<<"Yeni cumle: "<<cumle<<endl;
+			break;
+		case 2:
+		for(int i=0;i<cumle.size();i++){
+			if((int)cumle[i]>=65&&(int)cumle[i]<=90){
+				cumle[i]=cumle[i]+32;
+			}
+		}
+		cout<<"Yeni cumle:"<<cumle<<endl;
+			break;
+		case 3:
+			for(int i=0;i<cumle.size();i++){
+				if((int)cumle[i]==32){
+					adet++;
+				}
+			}
+			cout<<"Kelime adeti:"<<adet<<endl;
+			break;
+		case 4:
+			cout<<"Cumleniz:"<<cumle<<endl;
+			cout<<"Silmek istediginizz kelimeyi giriniz:";
+			cin>>kelimesil;
+			cumle.erase(cumle.find(kelimesil),kelimesil.size());
+			cout<<"yeni cumle: "<<cumle<<endl;
+			break;
+		case 5:
+			cout<<"Eklemek istediginiz karakteri giriniz:";
+			cin>>karakter;
+			cout<<"Kaç adet eklemek istediginizi giriniz:";
+			cin>>adet1;
+			cumle.append(adet1,karakter);
+			cout<<"Yeni cumle:"<<cumle;
+			break;
+		case 6:
+			cout<<"Cumleniz: "<<cumle<<endl;
+			cout<<"Yukaridaki cumleden degistirmek istediginiz kelimeyi giriniz:";
+			cin>>kelimedegistir;
+			cout<<"Yeni kelimenini giriniz:";
+			cin>>yenikelime;
+			cumle.replace(cumle.find(kelimedegistir),kelimedegistir.size(),yenikelime);
+			cout<<"Yeni Cumleniz:"<<cumle<<endl;
+			break;
+		case 7:
+			cout<<"Cumleniz:"<<cumle<<endl;
+			cout<<"hangi kelimeden sonra ekleme yapacağınızı yazin:";
+			cin>>kelimedensonra;
+			cout<<"Hangi kelimeyi ekleyeceğinizi yazin:";
+			cin>>eklenecekkelime;
+			cumle.insert(cumle.find(kelimedensonra)+kelimedensonra.size()," "+eklenecekkelime);
+			cout<<"Yeni cumle:"<<cumle<<endl;
+			break;
+	}
+	system("pause");
+	return 0;
+}
