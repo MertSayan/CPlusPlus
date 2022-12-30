@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+
+int main(){
+	
+	
+	int sayi,carpan=2;
+	
+	cout<<"sayinizi giriniz:";
+	cin>>sayi;
+	
+	cout<<"Asal carpanlar :";
+	
+	while(sayi>1){
+		
+		while(sayi%carpan==0){
+			cout<<carpan<<" ";
+			sayi/=carpan;
+		}
+		carpan++;
+	}
+	
+	system("pause");
+	return 0;
+}
